@@ -71,7 +71,6 @@ function getMean(numbers) {
 function getMin(numbers) {
  let min=numbers[0]
  for (i=1;i<numbers.length;i++){
-  console.log ("min="+min+" i="+i)
   if (numbers[i]<min) {
     min=numbers[i]
   }
@@ -107,12 +106,26 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
+  let even = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0)
+    even.push(numbers[i]);
+  }
+  return even
 }
+
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the odd numbers in the array
  */
-function getOdds(numbers) {
-  // TODO
+function getOdds(numbers){
+  let odd = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 1)
+    odd.push(numbers[i]);
+  }
+  return odd
 }
+
+
